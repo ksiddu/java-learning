@@ -21,7 +21,7 @@ public class ArrayListLoopThroughTest {
 
 		System.out.println("List elements: " + list);
 
-		// 5 ways to iterate the list
+		// 6 ways to iterate the list
 
 		// 1. using for loop
 		System.out.println("***** using for loop *****");
@@ -42,18 +42,18 @@ public class ArrayListLoopThroughTest {
 			System.out.println("Element: " + it.next());
 		}
 
-		// 4. using the java8 lamda expression
-		System.out.println("***** using java8 lamda expression *****");
-		list.forEach(e -> {
-			System.out.println("Element: " + e);
-		});
-
-		// 5. using the while loop
+		// 4. using the while loop
 		System.out.println("***** using while loop *****");
 		int index = 0;
 		while (list.size() > index) {
 			System.out.println("Element: " + list.get(index++));
 		}
+
+		// 5. using the java8 lamda expression
+		System.out.println("***** using java8 lamda expression *****");
+		list.forEach(e -> {
+			System.out.println("Element: " + e);
+		});
 
 		// 6. using the java streams and parallelStream
 		System.out.println("***** using  java streams *****");

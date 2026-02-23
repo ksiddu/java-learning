@@ -17,6 +17,7 @@ public class ArraysToListTest {
 
 		System.out.println("Integer array elements : " + Arrays.toString(array));
 
+		// using Arrays.asList method
 		List<Integer> list = Arrays.asList(array);
 
 		System.out.println("List array elements : " + list);
@@ -32,15 +33,17 @@ public class ArraysToListTest {
 
 		System.out.println("list2 array elements : " + list2);
 
+		// to ArrayList using Collectors.toCollection
 		Integer[] numbers3 = { 1, 3, 9, 8, 7 };
-		ArrayList<Integer> list3 = Arrays.stream(numbers2).collect(Collectors.toCollection(ArrayList::new));
+		ArrayList<Integer> list3 = Arrays.stream(numbers3).collect(Collectors.toCollection(ArrayList::new));
 
 		System.out.println("ArrayList list3 array elements : " + list3);
 
+		// to LinkedList using Collectors.toCollection
 		Integer[] numbers4 = { 1, 3, 9, 8, 7 };
-		LinkedList<Integer> list4 = Arrays.stream(numbers2).collect(Collectors.toCollection(LinkedList::new));
+		LinkedList<Integer> list4 = Arrays.stream(numbers4).collect(Collectors.toCollection(LinkedList::new));
 
-		System.out.println("LinkedList list4 array elements : " + list3);
+		System.out.println("LinkedList list4 array elements : " + list4);
 
 	}
 

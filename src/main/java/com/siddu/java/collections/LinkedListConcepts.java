@@ -14,6 +14,7 @@ public class LinkedListConcepts {
 		// 4. random access using the index of the elements
 		// 5. manipulation is fast since no shifting is required
 		// 6. non-synchronized (not thread safe)
+		// 7. addFirst, addLast, removeFirst, removeLast, getFirst, getLast along with get and set methods
 
 		LinkedList<String> list = new LinkedList<String>();
 
@@ -53,6 +54,12 @@ public class LinkedListConcepts {
 
 		// get random element
 		System.out.println("Elements at specific index: " + list.get(3));
+		
+		// to update the specific element with index
+		
+		list.set(4, "Tom Updated");
+		
+		System.out.println("Elements of a ll after update: " + list);
 
 	}
 

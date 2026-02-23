@@ -1,10 +1,13 @@
 package com.siddu.java.self;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 public class LogicsTest {
 
@@ -114,6 +117,19 @@ public class LogicsTest {
 		}
 
 	}
+	
+	public void firstTwoHighestWithSortMethod(int[] arr) {
+
+		//Arrays.sort(arr);
+		
+		int[] newArray = IntStream.of(arr).boxed().sorted(Collections.reverseOrder()).mapToInt(i -> i).toArray();
+		
+	
+		System.out.println(newArray[0]);
+		System.out.println(newArray[1]);
+		
+
+	}
 
 	public static String removeDuplicateChars(String str) {
 
@@ -162,6 +178,10 @@ public class LogicsTest {
 
 		String str2 = "Parameter";
 		t1.duplicateCharactersInAnString(str2);
+		
+		int[] array = {55, 25, 39, 109, 200};
+		
+		t1.firstTwoHighestWithSortMethod(array);
 	}
 
 }

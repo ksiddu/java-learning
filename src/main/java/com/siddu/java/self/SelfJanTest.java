@@ -56,6 +56,7 @@ public class SelfJanTest {
 			System.out.println(k + ": " + v);
 		});
 
+		// Bubble sort algo
 		int[] array = { 10, 5, 3, 2, 90 };
 		int length = array.length;
 		for (int i = 0; i < length - 1; i++) {

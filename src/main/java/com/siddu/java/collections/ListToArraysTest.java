@@ -22,7 +22,7 @@ public class ListToArraysTest {
 		Integer[] array1 = list1.toArray(Integer[]::new);
 		System.out.println("array1 : " + Arrays.toString(array1));
 
-		// 2nd method: using toArray(T[] a]
+		// 2nd method: using toArray(T[] a] and the stream()
 
 		List<Integer> list2 = new ArrayList<Integer>();
 
@@ -34,6 +34,38 @@ public class ListToArraysTest {
 
 		Integer[] array2 = list2.stream().toArray(Integer[]::new);
 		System.out.println("array2 : " + Arrays.toString(array2));
+
+		// 3rd method: using toArray(T[] a] and temp array
+
+		List<Integer> list3 = new ArrayList<Integer>();
+
+		list3.add(1);
+		list3.add(2);
+		list3.add(3);
+		list3.add(4);
+		list3.add(5);
+
+		Integer[] newArray = new Integer[list3.size()];
+		list3.toArray(newArray);
+
+		System.out.println("array3 : " + Arrays.toString(newArray));
+
+		// 4th method: using stream().mapToInt(i -> i).toArray(); primitive array
+
+		List<Integer> list4 = new ArrayList<Integer>();
+
+		list4.add(11);
+		list4.add(22);
+		list4.add(33);
+		list4.add(44);
+		list4.add(55);
+
+		int[] primitiveArray = list4.stream().mapToInt(i -> i).toArray();
+
+		System.out.println("array4 : " + Arrays.toString(primitiveArray));
+
 	}
 
 }
+
+// ref: https://www.geeksforgeeks.org/java/arraylist-array-conversion-java-toarray-methods/

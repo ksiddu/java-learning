@@ -5,7 +5,7 @@ public class ReverseAStringRecursion {
 	// using the recursion
 	public static String recursion(String str) {
 		// str = "India";
-		if (str.isEmpty()) {
+		if (str.isEmpty() || str!=null || str.length() == 1) {
 			return str;
 		}
 		return recursion(str.substring(1)) + str.charAt(0);

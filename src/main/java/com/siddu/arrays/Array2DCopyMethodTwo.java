@@ -11,9 +11,11 @@ public class Array2DCopyMethodTwo {
 
 		int[][] destination = new int[source.length][];
 
-		System.out.println(destination.length);
+		System.out.println("Singel 1D src array count: " + source.length);
 
-		for (int i = 0; i < destination.length; ++i) {
+		System.out.println("Singel 1D des array count: " + destination.length);
+
+		for (int i = 0; i < destination.length; i++) {
 
 			destination[i] = new int[source[i].length];
 

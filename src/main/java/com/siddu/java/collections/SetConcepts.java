@@ -80,7 +80,7 @@ public class SetConcepts {
 		set4.add(87);
 		set4.add(2);
 		set4.add(5);
-		// set4.add(null);
+		// set4.add(null); throws NullPointerException
 
 		System.out.println("Elements of a TreeSet: " + set4);
 

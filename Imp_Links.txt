@@ -19,3 +19,15 @@ Sort
 
 
 https://www.digitalocean.com/community/tutorials/java-sort-list
+
+
+Preparations:
+
+Done:
+com.siddu.java.collections
+com.siddu.java.self
+com.siddu.arrays
+
+TODO:
+com.siddu.java.leet
+com.gavi.preparation
